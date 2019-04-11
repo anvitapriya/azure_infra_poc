@@ -48,7 +48,7 @@ pipeline {
         ARM_CLIENT_ID       = credentials("ARM_CLIENT_ID")
         ARM_CLIENT_SECRET   = credentials("ARM_CLIENT_SECRET")
         ARM_TENANT_ID       = credentials("ARM_TENANT_ID")
-        WORKDIR_CMD         = '/var/lib/jenkins/workspace/vnet_test2/'
+        WORKDIR_CMD         = '/var/lib/jenkins/workspace/infra-demo/'
     }
     stages {
         stage('checkout-repo') {
