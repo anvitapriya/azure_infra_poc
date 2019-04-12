@@ -6,7 +6,7 @@ provider "azurerm"
 
 resource "azurerm_virtual_machine" "TenantDocker" {
   name                  = "${var.vm_name}"
-  location              = "${var.main.location}"
+  location              = "${var.location}"
   resource_group_name   = "${var.resource_group_name}"
   vm_size               = "Standard B2s"
 
