@@ -58,6 +58,7 @@ pipeline{
 		    sh 'whoami'	
 		    sh 'ls'
 		    sh 'sudo su -'
+		    sh 'terraform --version'
 		    sh 'cd ${WORKDIR_CMD} && terraform init'
 		    sh 'echo $PWD'
             }
