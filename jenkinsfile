@@ -44,7 +44,7 @@ pipeline{
         ARM_CLIENT_ID       = credentials("ARM_CLIENT_ID")
         ARM_CLIENT_SECRET   = credentials("ARM_CLIENT_SECRET")
         ARM_TENANT_ID       = credentials("ARM_TENANT_ID")
-        WORKDIR_CMD         = '/var/lib/jenkins/workspace/azure_infra_demo/'
+        WORKDIR_CMD         = '/var/lib/jenkins/workspace/azure_infra_poc/'
     }
     stages {
         stage('checkout-repo') {
