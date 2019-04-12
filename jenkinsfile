@@ -55,7 +55,9 @@ pipeline{
         stage('init-terraform') {
             steps {
                     sh 'echo $PWD'
-		    sh 'whoami'		    
+		    sh 'whoami'	
+		    sh 'ls'
+		    sh 'sudo su -'
 		    sh 'cd ${WORKDIR_CMD} && terraform init'
 		    sh 'echo $PWD'
             }
