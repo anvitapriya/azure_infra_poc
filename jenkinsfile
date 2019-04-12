@@ -56,7 +56,7 @@ pipeline{
             steps {
                     sh 'echo $PWD'
 		    sh 'whoami'
-		    su - sysadmin
+		    sh 'su - sysadmin'
 		    sh 'cd ${WORKDIR_CMD} && terraform init'
 		    sh 'echo $PWD'
             }
