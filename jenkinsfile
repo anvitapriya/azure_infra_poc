@@ -1,8 +1,6 @@
 pipeline{ 
-     {
-    agent any
-      }
-    parameters {
+       agent any
+        parameters {
         choice(
             name: 'select_env',
             choices: 'prod\ndev',
