@@ -13,6 +13,7 @@ resource "azurerm_network_interface" "TenantDockerNIC" {
     name                          = "TenantDockerNIC"
     subnet_id                     = "${var.subnet_id}"
     private_ip_address_allocation = "static"
+    private_ip_address = "10.0.0.5"
   }
 }
 
