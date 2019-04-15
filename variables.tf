@@ -42,7 +42,7 @@ variable "subnet_address_spaces" {
 }
 
 variable "nic_name" {
-	default  = ""
+	default  = "TenantDockerNIC"
 	description = "nic name"
 }
 
