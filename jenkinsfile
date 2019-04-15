@@ -60,7 +60,6 @@ pipeline{
         stage('init-terraform') {
             steps {
                     sh 'echo $PWD'
-		    sh 'terraform force-unlock .terraform/plugins/linux_amd64/lock.json'
 		    sh 'cd ${WORKDIR_CMD} && terraform init -lock=false'
 		    sh 'echo $PWD'
             }
