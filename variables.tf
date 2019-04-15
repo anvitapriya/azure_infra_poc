@@ -53,7 +53,7 @@ variable "vm_name" {
 
 variable "subnet_id"
 {
-	default 	 =  ""
+	default 	 =  "/subscriptions/65b971da-f75e-4105-a974-35530d57551d/resourceGroups/TenantResources/providers/Microsoft.Network/virtualNetworks/TenantVnet/subnets/TenantSubnet"
 	description  =  "subnet id"
 }
 
