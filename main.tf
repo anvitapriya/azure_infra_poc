@@ -1,6 +1,6 @@
 provider "azurerm"
 {
-    version = "=1.24.0"
+  
 }
 
 resource "azurerm_virtual_machine" "TenantDocker" {
