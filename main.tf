@@ -32,7 +32,7 @@ resource "azurerm_virtual_machine" "TenantDocker" {
   # delete_data_disks_on_termination = true
 
   storage_image_reference {
-    publisher = "Canonical"
+    publisher = "OpenLogic"
     offer     = "CentOS"
     sku       = "7.5"
     version   = "latest"
