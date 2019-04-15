@@ -4,6 +4,18 @@ provider "azurerm"
 
 }
 
+resource "azurerm_network_interface" "TenantDockerNIC" {
+  name                = "${var.nic_name}"
+  location              = "${var.location}"
+  resource_group_name   = "${var.resource_group_name}"
+
+  ip_configuration {
+    name                          = "TenantDockerNIC"
+    subnet_id                     = "${var.subnet_name.id}"
+    private_ip_address_allocation = "static"
+  }
+}
+
 resource "azurerm_virtual_machine" "TenantDocker" {
   name                  = "${var.vm_name}"
   location              = "${var.location}"
@@ -36,17 +48,5 @@ resource "azurerm_virtual_machine" "TenantDocker" {
   }
   os_profile_linux_config {
     disable_password_authentication = false
-  }
-   
-  resource "azurerm_network_interface" "TenantDockerNIC" {
-  name                = "${var.nic_name}"
-  location              = "${var.location}"
-  resource_group_name   = "${var.resource_group_name}"
-
-  ip_configuration {
-    name                          = "TenantDockerNIC"
-    subnet_id                     = "${azurerm_subnet.internal.id}"
-    private_ip_address_allocation = "static"
-  }
- }
+  }  
 }
