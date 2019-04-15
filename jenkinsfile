@@ -60,7 +60,7 @@ pipeline{
         stage('init-terraform') {
             steps {
                     sh 'echo $PWD'
-		    sh 'cd ${WORKDIR_CMD} && terraform init'
+		    sh 'cd ${WORKDIR_CMD} && terraform init -lock=false'
 		    sh 'echo $PWD'
             }
         }
