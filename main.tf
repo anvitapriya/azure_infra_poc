@@ -3,6 +3,18 @@ provider "azurerm"
   
 }
 
+resource "azurerm_network_interface" "TenantDockerNIC" {
+  name                = "TenantDockerNIC"
+  location              = "${var.location}"
+  resource_group_name   = "${var.resource_group_name}"
+
+  ip_configuration {
+    name                          = "TenantDockerNIC"
+    subnet_id                     = "${azurerm_subnet.tenantsubnet.id}"
+    private_ip_address_allocation = "static"
+  }
+}
+
 resource "azurerm_virtual_machine" "TenantDocker" {
   name                  = "${var.vm_name}"
   location              = "${var.location}"
