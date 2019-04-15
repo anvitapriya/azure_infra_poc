@@ -33,8 +33,8 @@ resource "azurerm_virtual_machine" "TenantDocker" {
 
   storage_image_reference {
     publisher = "Canonical"
-    offer     = "CentOS-based 7.5"
-    sku       = "7.5.1804-LTS"
+    offer     = "CentOS"
+    sku       = "7.5"
     version   = "latest"
   }
   storage_os_disk {
