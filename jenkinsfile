@@ -1,5 +1,10 @@
 pipeline{ 
-       agent any
+     agent {
+        docker {
+            image 'hashicorp/terraform:full'
+            args '-v /root --entrypoint=""'
+        }
+    }
         parameters {
         choice(
             name: 'select_env',
