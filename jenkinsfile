@@ -6,11 +6,7 @@ pipeline{
         }
     }
         parameters {
-        choice(
-            name: 'select_env',
-            choices: 'prod\ndev',
-            description: 'select the environment names'
-        )
+        
         choice(
             name: 'ws_option',
             choices: 'select\nnew',
@@ -18,7 +14,7 @@ pipeline{
         )
         choice(
             name: 'ws_name',
-            choices: 'dev_pci',
+            choices: 'dev_env',
             description: 'workspace name for terraform to run'
         )
         choice(
