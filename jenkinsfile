@@ -6,7 +6,6 @@ pipeline{
         }
     }
         parameters {
-        
         choice(
             name: 'ws_option',
             choices: 'select\nnew',
