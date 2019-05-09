@@ -4,10 +4,9 @@ provider "azurerm"
     Arguments: 
     InstallTerraform: false
     UseAzureSub: false
-- task: TerraformCLI@0
+- task: TerraformInstaller@0
   inputs:
-    command: 'validate'
-    secureVarsFile: 'variables.tf'
+    terraformVersion: '0.11.11'
 {
 
 
